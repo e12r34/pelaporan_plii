@@ -24,7 +24,14 @@
             <div class="card-header">
                 <div class="card-title">
                      Jadwal Lelang
-                </div>
+                     <br><br>
+                     <a href="/transaksilist">
+                        <button class="btn btn-secondary">
+                            Back
+                        </button>
+                    </a>
+                </div><br><br>
+
                 <div class="card-tools">
                     <div class="input-group input-group-sm" style="width: 150px;">
                         <input type="text" name="table_search" class="form-control float-right" placeholder="Cari">
@@ -62,7 +69,7 @@
                         <tr  *ngFor="let data of listJadwal; let i = index">
                             <td>{{i+1}}</td>
                             <td>{{data.nomerRegistrasi}}</td>
-                            <td>{{data.tanggalLelang}}</td> 
+                            <td>{{data.tanggalLelang | date:'YYYY-MM-dd'}}</td> 
                             <td>{{data.namaPenjual}}</td>
                             <td>{{data.sifatLelang}}</td>
                             <td>{{data.tempatLelang}}</td>

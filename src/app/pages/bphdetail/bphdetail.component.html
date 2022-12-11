@@ -28,6 +28,12 @@
                         [icon]="'blank'">
                         Tambah BPHTB
                     </app-button>
+                    
+                    <a href="/bphlist">
+                       <button class="btn btn-secondary">
+                           Back
+                       </button>
+                   </a>
                 </a>
                 </div>
                 <div class="card-tools">
@@ -70,9 +76,9 @@
                             <td>{{data.nomerRegistrasi}}</td>
                             <td>{{data.tanggalRegistrasi}}</td>
                             <td>{{data.nomorRisalahLelang}}</td>
-                            <td>{{data.tanggalRisalahLelang}}</td>
+                            <td>{{data.tanggalRisalahLelang | date:'YYYY-MM-dd'}}</td>
                             <td>{{data.namaPenjual}}</td> 
-                            <td>{{data.tanggalLelang}}</td>
+                            <td>{{data.tanggalLelang | date:'YYYY-MM-dd'}}</td>
                             <td><a href="/transaksiadd" >
                                 <app-button class="mb-1" [block]="true" [loading]="false" [disabled]="false"
                                     [icon]="'blank'">

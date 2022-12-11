@@ -24,9 +24,15 @@
             <div class="card-header">
                 <div class="card-title">
                     <a href="/jadwaladd/periode/{{idperiode}}">
-                        <app-button class="mb-2" [block]="true" [loading]="false" [disabled]="false" [icon]="'blank'">
+                        <app-button class="mb-2" [block]="false" [loading]="false" [disabled]="false" [icon]="'blank'">
                             Tambah Jadwal
                         </app-button>
+                        
+                        <a href="/jadwallist">
+                           <button class="btn btn-secondary">
+                               Back
+                           </button>
+                       </a>
                     </a>
                 </div>
                 <div class="card-tools">
@@ -67,7 +73,7 @@
                             <tr *ngFor="let data of listJadwal; let i = index">
                                 <td>{{i+1}}</td>
                                 <td>{{data.nomerRegistrasi}}</td>
-                                <td>{{data.tanggalLelang}}</td>
+                                <td>{{data.tanggalLelang | date:'YYYY-MM-dd'}}</td>
                                 <td>{{data.namaPenjual}}</td>
                                 <td>{{data.sifatLelang}}</td>
                                 <td>{{data.tempatLelang}}</td>

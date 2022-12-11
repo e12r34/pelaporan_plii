@@ -14,6 +14,7 @@ export class TransaksilandingComponent implements OnInit {
   public listJadwal: Array<any>
   public idperiode: String
   public isempty: boolean = true
+  public color="secondary";
 
   constructor(private toastr: ToastrService,
     private route: ActivatedRoute,
@@ -28,6 +29,8 @@ export class TransaksilandingComponent implements OnInit {
     this.http.get("https://pelaporanpliiapi.azurewebsites.net/api/JadwalLelang/AllPerPeriode/" + this.idperiode, this.api.generateHeader()).subscribe((result: any) => {
 
       this.listJadwal = result.data
+      // console.log(this.jadwal)
+      
       console.log(result)
       if (this.listJadwal.length > 0) {
         this.isempty = false

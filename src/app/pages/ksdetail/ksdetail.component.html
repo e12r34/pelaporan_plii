@@ -28,6 +28,11 @@
                         [icon]="'blank'">
                         Tambah Penggunaan Kertas Sekuriti
                     </app-button>
+                    <a href="/kslist">
+                       <button class="btn btn-secondary">
+                           Back
+                       </button>
+                   </a>
                 </a>
                 </div>
                 <div class="card-tools">
@@ -65,7 +70,7 @@
                             <td>{{data.status}}</td>
                             <td>{{data.nomerRegistrasi}}</td> 
                             <td>{{data.nomorRisalahLelang}}</td>  
-                            <td>{{data.tanggalLelang}}</td>
+                            <td>{{data.tanggalLelang | date:'YYYY-MM-dd'}}</td>
                             <td><a href="/transaksiadd" >
                                 <app-button class="mb-1" [block]="true" [loading]="false" [disabled]="false"
                                     [icon]="'blank'">

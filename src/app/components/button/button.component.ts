@@ -16,7 +16,8 @@ export class ButtonComponent {
     public icons = {
         facebook: 'fab fa-facebook',
         google: 'fab fa-google',
-        googlePlus: 'fab fa-google-plus'
+        googlePlus: 'fab fa-google-plus',
+        arrowleft:""
     };
 
     constructor() {}

@@ -111,7 +111,7 @@ export class JadwaladdComponent implements OnInit {
     }
     onSubmit() {
         if (confirm("Apakah anda sudah mengisi data dengan lengkap dan benar?")) {
-            let url = "https://pelaporanpliiapi.azurewebsites.net/api/JadwalLelang"
+            let url = "https://pelaporanpliiapi.azurewebsites.net/api/JadwalLelang/"
             if (this.isAddMode) {
                 this.http.post(url, this.generateBodyReq(this.jadwalForm.value), this.api.generateHeader()).subscribe(data => {
                     console.log("post ressult ", data);
